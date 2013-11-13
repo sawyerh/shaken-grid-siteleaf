@@ -1,0 +1,8 @@
+<section class="post-listing">
+  {% for post in posts %}
+    <a href="{{post.url}}" class="post-listing-item">
+      <h1 class="post-listing-title">{{post.title}}</h1>
+      <time class="post-listing-date">{{ post.date | date: "%B %d, %Y" }}</time>
+    </a>
+  {% endfor %}
+</section>

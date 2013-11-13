@@ -1,0 +1,211 @@
+@import 'toolbox'
+
+*
+  +box-sizing(border-box)
+
+body
+  font-family: $ff_sans
+  font-size: $fs_body
+  color: $tc_main
+  padding: 0
+  margin: 0
+  line-height: 1.4
+
+img, video, object, embed, audio
+  max-width: 100%
+
+.wrap
+  margin: 90px auto
+  width: 90%
+  max-width: $w_max_wrap
+
+h1,h2,h3,h4,h5
+  margin-top: 0
+  padding: 0
+
+a
+  color: $tc_main
+
+.siteleaf-credit
+  display: block
+  font-size: 12px
+  color: $tc_light
+  text-align: center
+  margin: $gutter 0
+
+  a
+    color: $tc_light
+
+.post-body, .body
+  line-height: 1.5
+
+// Header
+// ================================================
+.primary-header
+  text-align: center
+  margin: $gutter 0
+
+  h1
+    font-size: 60px
+    margin: 0
+
+    +max-width($bp_fs_adjust)
+      font-size: 36px
+
+    a
+      text-decoration: none
+
+
+.nav-menu
+  font-size: $fs_body_small
+
+  a
+    color: $tc_light
+    display: inline-block
+    margin: 0 10px
+
+    &:hover
+      color: #000
+      text-decoration: none
+
+
+// Post listing pages
+// ================================================
+.post-listing
+  +clearfix
+
+.page-summary
+  margin: 0 auto $gutter
+  max-width: 720px
+  text-align: center
+
+.view-all-button
+  text-align: center
+  margin: $gutter auto
+  width: 90%
+  max-width: 300px
+  background-color: #000
+  color: #fff
+  border-radius: 3px
+  display: block
+  padding: 15px 20px
+  text-decoration: none
+  font-weight: bold
+
+  &:hover
+    background: #444
+
+.post-preview
+  width: 33%
+  padding: $gutter / 2
+  border: 1px solid $border_color
+  float: left
+
+  +max-width(700px)
+    width: 50%
+
+  +max-width(500px)
+    width: 100%
+    padding: 15px
+
+  .post-body
+    margin: 0
+    color: $tc_light
+
+.post-title
+  font-size: 18px
+  margin: 10px 0
+
+  a
+    text-decoration: none
+
+
+// Archives
+// ================================================
+.post-listing-item
+  display: block
+  margin: 0 auto 15px
+  padding: 30px
+  border: 1px solid $border_color
+  max-width: 700px
+  text-decoration: none
+
+  &:hover
+    background-color: #000
+    color: #fff
+
+.post-listing-title
+  +ellipsis
+  font-size: 20px
+  display: block
+  margin: 0
+
+.post-listing-date
+  font-size: $fs_body_small
+  color: $tc_light
+
+// Page / post content
+// ================================================
+.content
+  max-width: 900px
+  margin: $gutter auto 0
+  border: 1px solid $border_color
+
+  .padded
+    max-width: 800px
+    margin: auto
+    padding-left: $gutter
+    padding-right: $gutter
+
+  .title
+    padding-top: $gutter
+
+  .body
+    padding-bottom: $gutter
+
+  +max-width($bp_fs_adjust)
+    .title, .body
+      padding-left: $gutter / 2
+      padding-right: $gutter / 2
+
+    .title
+      padding-top: $gutter / 2
+
+    .body
+      padding-bottom: $gutter / 2
+
+.title
+  font-size: 30px
+  +max-width($bp_fs_adjust)
+    font-size: 20px
+
+.subpages
+  margin: 5px 0 20px
+  font-size: $fs_body_small
+
+  a
+    display: inline-block
+    margin-right: 5px
+
+.body
+  font-size: 18px
+  +max-width($bp_fs_adjust)
+    font-size: 14px
+
+.feat-image-wrap
+  text-align: center
+
+.tagset
+  font-size: 14px
+
+.tag
+  text-decoration: none
+
+  &:after
+    content: ', '
+
+  &:last-child:after
+    content: ''
+
+  &:hover
+    color: $tc_light

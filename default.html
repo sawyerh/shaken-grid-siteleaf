@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>{{site.title}} | {{title}}</title>
+  <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
+  <link rel="stylesheet" type="text/css" href="/styles/css/global.css" />
+  <script src="//use.edgefonts.net/source-sans-pro.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <header class="primary-header">
+      <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
+
+      <nav class="nav-menu">
+        {% for page in site.pages %}
+          <a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a>
+        {% endfor %}
+      </nav>
+    </header>
+
+    {% if type == 'page' and posts.size > 0 and body != '' %}
+      <div class="page-summary body">{{ body }}</div>
+    {% elsif type == 'post' or (type == 'page' and body != '') %}
+      {% include "includes/body" %}
+    {% elsif type != 'post' and type != 'page' %}
+      <div class="page-summary body">Browsing <strong>{{ title }}</strong></div>
+    {% endif %}
+
+    {% if posts.size > 0 and type == 'page' %}
+      {% include "includes/post-grid" %}
+      <a href="{{ archive_url }}" class="view-all-button">View all</a>
+    {% elsif posts.size > 0 %}
+      {% include "includes/post-listing" %}
+    {% endif %}
+
+    <p class="siteleaf-credit">Powered by <a href="http://siteleaf.com" target="_blank">Siteleaf</a></p>
+  </div>
+
+  <script src="scripts/js/min/application.js"></script>
+</body>
+</html>

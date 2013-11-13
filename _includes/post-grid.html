@@ -1,0 +1,21 @@
+<section class="post-listing">
+  {% for post in posts %}
+
+    <article class="post-preview">
+      {% if post.assets.size > 0 %}
+        <a href="{{post.url}}" class="post-image-link">
+          <img src="{{ post.assets.first.url }}" alt="{{ post.title }}" />
+        </a>
+      {% endif %}
+      <h1 class="post-title"><a href="{{post.url}}">{{post.title}}</a></h1>
+      <p class="post-body">
+        {% if post.meta.excerpt %}
+          {{post.meta.excerpt | strip_html | truncate: 200}}
+        {% else %}
+          {{post.body | strip_html | truncate: 200}}
+        {% endif %}
+      </p>
+    </article>
+
+  {% endfor %}
+</section>

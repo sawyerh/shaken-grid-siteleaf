@@ -1,0 +1,30 @@
+<div class="content">
+  {% if assets.size > 0 and type == 'post' %}
+    <div class="feat-image-wrap">
+      <img src="{{ assets.first.url }}" alt="{{ title }}" class="feat-image" />
+    </div>
+  {% endif %}
+
+  <h1 class="title padded">{{ title }}</h1>
+
+  {% if pages.size > 0 %}
+    <div class="subpages padded">
+      {% for page in pages %}
+        <a href="{{page.url}}">{{page.title}}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="body padded">
+    {{ body }}
+
+    {% for tagset in taxonomy %}
+      <div class="tagset">
+        <strong>{{tagset.key}}:</strong>
+        {% for tag in tagset %}
+          <a href="{{tag.url}}" class="tag">{{tag.value}}</a>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

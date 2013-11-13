@@ -1,0 +1,5 @@
+javascripts:
+  application:
+    - scripts/js/plugins/packery.js
+    - scripts/js/plugins/imagesLoaded.js
+    - scripts/js/global.js
