@@ -7,8 +7,11 @@
   <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
   <link rel="stylesheet" type="text/css" href="/styles/css/global.css" />
   <script src="//use.edgefonts.net/source-sans-pro.js"></script>
+
+  {% if site.meta.head %}{{ site.meta.head }}{% endif %}
 </head>
 <body>
+  {% if site.meta.body_top %}{{ site.meta.body_top }}{% endif %}
 
   <div class="wrap">
 
@@ -41,5 +44,7 @@
   </div>
 
   <script src="scripts/js/min/application.js"></script>
+
+  {% if site.meta.body_bottom %}{{ site.meta.body_bottom }}{% endif %}
 </body>
 </html>

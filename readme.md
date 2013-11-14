@@ -16,6 +16,10 @@ As mentioned above, gallery items are Siteleaf Posts. When displaying posts, the
 
 When posts are displayed in a group, the theme will truncate the post body to 200 characters. If you want to write a custom excerpt, create a meta field on your post with a key of `excerpt` and write your custom excerpt as the meta field `value`.
 
+## Custom CSS and Analytics
+
+If you need to add code to your theme, but don't feel like customizing the theme, you can utilize Siteleaf's site meta fields. There are three built-in site meta fields: `head`, `body_top` and `body_bottom`. You can create a site meta field at the bottom of your site's settings page in the Siteleaf dashboard.
+
 ## Other resources
 
 To learn more about how to use Siteleaf or to customize the theme to meet your needs, check out the [Siteleaf theme documentation](https://github.com/siteleaf/siteleaf-themes)
