@@ -43,7 +43,7 @@ a
 .button
   display: inline-block
   text-align: center
-  background-color: #000
+  background-color: $bg_dark
   color: #fff
   border-radius: 3px
   padding: 15px 20px
@@ -51,7 +51,7 @@ a
   font-weight: bold
 
   &:hover
-    background: #444
+    background: $bg_dark_hover
 
 
 // Header
@@ -80,7 +80,7 @@ a
     margin: 0 10px
 
     &:hover
-      color: #000
+      color: $tc_main
       text-decoration: none
 
 
@@ -136,7 +136,7 @@ a
   text-decoration: none
 
   &:hover
-    background-color: #000
+    background-color: $bg_dark
     color: #fff
 
 .post-listing-title
@@ -148,6 +148,7 @@ a
 .post-listing-date
   font-size: $fs_body_small
   color: $tc_light
+
 
 // Page / post content
 // ================================================
@@ -223,3 +224,23 @@ a
 
   &:hover
     color: $tc_light
+
+.post-nav
+  +clearfix
+  background: $bg_dark
+
+.post-nav-link
+  +ellipsis
+  color: #fff
+  text-decoration: none
+  display: inline-block
+  width: 50%
+  padding: 15px 30px
+  text-align: center
+  float: left
+
+  &.next
+    float: right
+
+  &:hover
+    background: $bg_dark_hover

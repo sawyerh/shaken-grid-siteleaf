@@ -27,4 +27,16 @@
       </div>
     {% endfor %}
   </div>
+
+  {% if type == 'post' and (next or previous) %}
+    <div class="post-nav">
+      {% if previous %}
+        <a href="{{ previous.url }}" class="post-nav-link previous">&larr; {{ previous.title }}</a>
+      {% endif %}
+
+      {% if next %}
+        <a href="{{ next.url }}" class="post-nav-link next">{{ next.title }} &rarr;</a>
+      {% endif %}
+    </div>
+  {% endif %}
 </div>
