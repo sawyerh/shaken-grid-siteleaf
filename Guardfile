@@ -1,5 +1,5 @@
 # Compile SASS
-guard 'sass', :input => 'styles/sass', :output => 'styles/css', :smart_partials => true
+guard 'sass', :input => 'styles/sass', :output => 'styles/css', :smart_partials => true, :style => :compressed
 
 # Compile Coffeescript
 guard 'coffeescript', :input => 'scripts/coffee', :output => 'scripts/js'

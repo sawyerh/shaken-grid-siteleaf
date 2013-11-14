@@ -39,6 +39,21 @@ a
 .post-body, .body
   line-height: 1.5
 
+
+.button
+  display: inline-block
+  text-align: center
+  background-color: #000
+  color: #fff
+  border-radius: 3px
+  padding: 15px 20px
+  text-decoration: none
+  font-weight: bold
+
+  &:hover
+    background: #444
+
+
 // Header
 // ================================================
 .primary-header
@@ -80,20 +95,10 @@ a
   text-align: center
 
 .view-all-button
-  text-align: center
   margin: $gutter auto
   width: 90%
   max-width: 300px
-  background-color: #000
-  color: #fff
-  border-radius: 3px
   display: block
-  padding: 15px 20px
-  text-decoration: none
-  font-weight: bold
-
-  &:hover
-    background: #444
 
 .post-preview
   width: 33%
@@ -189,6 +194,15 @@ a
 
 .body
   font-size: 18px
+
+  h1, h2
+    font-size: 20px
+    margin: 2em 0 0.7em
+    line-height: 1.3
+
+  h3
+    font-size: 18px
+
   +max-width($bp_fs_adjust)
     font-size: 14px
 

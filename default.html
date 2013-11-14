@@ -32,7 +32,7 @@
 
     {% if posts.size > 0 and type == 'page' %}
       {% include "includes/post-grid" %}
-      <a href="{{ archive_url }}" class="view-all-button">View all</a>
+      <a href="{{ archive_url }}" class="view-all-button button">View all</a>
     {% elsif posts.size > 0 %}
       {% include "includes/post-listing" %}
     {% endif %}
