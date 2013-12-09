@@ -1,1 +1,8 @@
 *.zip
+*.yml
+*.lock
+Gemfile
+Guardfile
+readme.md
+*.coffee
+*.sass
